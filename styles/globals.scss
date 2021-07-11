@@ -1,15 +1,15 @@
 @import "_config";
 @import url("https://fonts.googleapis.com/css?family=Muli");
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap");
 body {
-  background-color: #fff;
-  font-family: "Manrope", sans-serif !important;
+  // background-color: #fff;
+  font-family: "Manrope", sans-serif;
   background-color: $landingpage_color;
 }
 // Set text color based on bg
 @function set-text-color($color) {
-  @if(lightness($color) > 70) {
-    @return #051B2E;
+  @if (lightness($color) > 70) {
+    @return #051b2e;
   } @else {
     @return #fff;
   }
@@ -17,14 +17,14 @@ body {
 // Set background & text color
 @mixin set-background($color) {
   background-color: $color;
-  color: set-text-color($color)
+  color: set-text-color($color);
 }
 // _buttons.scss
 %btn {
   display: inline-block;
   border: none;
   &:hover {
-    transform: scale(.98);
+    transform: scale(0.98);
     background-color: $footer_color;
   }
 }
@@ -32,6 +32,29 @@ body {
   @extend %btn;
   background-color: $button_color;
 }
+//Container
+.container {
+  padding-right: 70px;
+  padding-left: 70px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
 //Header
 .header {
   &__bg {
@@ -40,10 +63,10 @@ body {
     padding-left: 150px;
     padding-right: 150px;
   }
-  span{
+  span {
     color: #fff;
     font: 600 14px Manrope;
-    &:hover{
+    &:hover {
       color: $button_color;
       cursor: pointer;
     }
@@ -54,5 +77,19 @@ body {
     font-size: 18px;
     letter-spacing: -0.26px;
     color: #ffffff;
+  }
+}
+//Hero
+.hero {
+  margin-top: 50px;
+  h1 {
+    font-size: 25px;
+    font-weight: bolder;
+    letter-spacing: 0px;
+    color: #ffffff;
+  }
+
+  &__image {
+    text-align: right;
   }
 }
