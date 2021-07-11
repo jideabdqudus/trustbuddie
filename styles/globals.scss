@@ -1,3 +1,58 @@
-body{
-  background-color: red;
+@import "_config";
+@import url("https://fonts.googleapis.com/css?family=Muli");
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap');
+body {
+  background-color: #fff;
+  font-family: "Manrope", sans-serif !important;
+  background-color: $landingpage_color;
+}
+// Set text color based on bg
+@function set-text-color($color) {
+  @if(lightness($color) > 70) {
+    @return #051B2E;
+  } @else {
+    @return #fff;
+  }
+}
+// Set background & text color
+@mixin set-background($color) {
+  background-color: $color;
+  color: set-text-color($color)
+}
+// _buttons.scss
+%btn {
+  display: inline-block;
+  border: none;
+  &:hover {
+    transform: scale(.98);
+    background-color: $footer_color;
+  }
+}
+.btn-primary {
+  @extend %btn;
+  background-color: $button_color;
+}
+//Header
+.header {
+  &__bg {
+    background-color: $navbar_color;
+    padding: 20px;
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+  span{
+    color: #fff;
+    font: 600 14px Manrope;
+    &:hover{
+      color: $button_color;
+      cursor: pointer;
+    }
+  }
+  &__logo {
+    font-family: $manrope_font;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: -0.26px;
+    color: #ffffff;
+  }
 }
