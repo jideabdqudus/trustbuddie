@@ -1,10 +1,12 @@
 @import "_config";
-@import url("https://fonts.googleapis.com/css?family=Muli");
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap");
+
 body {
   // background-color: #fff;
   font-family: "Manrope", sans-serif;
   background-color: $landingpage_color;
+  background-image: url("../assets/dottedmap.svg");
+  background-repeat: no-repeat;
+  background-position-x: center
 }
 // Set text color based on bg
 @function set-text-color($color) {
@@ -65,7 +67,7 @@ body {
   }
   span {
     color: #fff;
-    font: 600 14px Manrope;
+    font: 400 14px Manrope;
     &:hover {
       color: $button_color;
       cursor: pointer;
@@ -82,14 +84,40 @@ body {
 //Hero
 .hero {
   margin-top: 50px;
-  h1 {
-    font-size: 25px;
-    font-weight: bolder;
-    letter-spacing: 0px;
+
+  &__left{
+    padding: 90px;
+    padding-left: 0px;
     color: #ffffff;
+    h1 {
+      font-size: 35px;
+      color: #ffffff;
+      font-weight: 900;
+      letter-spacing: 0px;
+      line-height: 45px;
+      font-family: $manrope_font;
+    }
+    span{
+      font-size: 15px;
+      font-weight: 200;
+      font-family: $manrope_font;
+    }
+
+    .btn-primary__hero{
+      @extend %btn;
+      background-color: $button_color;
+      color: #fff;
+      margin-top: 20px;
+      display: block;
+    }
   }
 
-  &__image {
+  &__right {
     text-align: right;
   }
+}
+
+
+.search-component{
+  
 }
