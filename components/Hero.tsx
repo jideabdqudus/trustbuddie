@@ -3,6 +3,7 @@ import {Row, Col, Button} from "antd"
 import Image from "next/image"
 //Imported Comps
 import HeroImage from "../assets/hero_image.png"
+import Beauty from "../assets/ic_spa_24px.svg"
 import { SearchComponent } from './SearchComponent'
 
 export const Hero: React.FC = () => {
@@ -16,7 +17,19 @@ export const Hero: React.FC = () => {
         </Col>
         <Col span={12} className="hero__right"><Image src={HeroImage} alt="Hero Image" height="420" width="400"/></Col>
       </Row>
+      <div className="search">
       <SearchComponent/>
+      <Row gutter={[32, 32]}>
+        <Col span={5} >
+          <div className="search__category"><Image src={Beauty} alt="Beauty and Well Being"/><h3>Beauty & Well Being</h3></div>
+        </Col>
+        <Col span={5} ></Col>
+        <Col span={5} ></Col>
+        <Col span={5} ></Col>
+        <Col span={4} ></Col>
+      </Row>  
+      </div>
+
     </div>
   )
 }

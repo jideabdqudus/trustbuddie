@@ -118,6 +118,17 @@ body {
 }
 
 
-.search-component{
-  
+.search{
+  background-color: #fff;
+
+  &__category{
+    h3{
+      display: inline;
+      font-weight: 600;
+      font-size: 14px;
+      color: $searchbar_category_color;
+      margin: 5px;
+      padding-bottom: 10px;
+    }
+  }
 }

@@ -12,23 +12,21 @@ export const SearchComponent:React.FC = () => {
   };
 
   return (
-    <div>
       <Form
       name="basic"
       onFinish={onFinish}
       onFinishFailed={onFinishFailed}
     >
-      <Row gutter={[16, 16]}>
-        <Col span={18}>
+      <Row gutter={[4, 4]}>
+        <Col span={20}>
         <Form.Item
-        name="username"
-        rules={[{ required: true, message: 'Please input your username!' }]}
+        name="search"
       >
-        <Input />
+        <Input placeholder="Search a Company, Category, Product" />
       </Form.Item>
 
         </Col>
-        <Col span={6}>
+        <Col span={2}>
       <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
         <Button type="primary" htmlType="submit">
           Submit
@@ -37,7 +35,6 @@ export const SearchComponent:React.FC = () => {
         </Col>
       </Row>
     </Form>
-    </div>
   )
 }
 
