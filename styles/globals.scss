@@ -97,6 +97,48 @@ body {
       cursor: pointer;
     }
   }
+  nav{
+    float: right;
+  }
+  nav ul {
+    list-style: none;
+    text-align: center;
+  }
+  nav ul li {
+    display: inline-block;
+  }
+  nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font: 400 14px Manrope;
+    margin: 0 20px;
+  }
+  nav ul li a,
+  nav ul li a:after,
+  nav ul li a:before {
+    transition: all 0.5s;
+  }
+  nav ul li a:hover {
+    transition: all 0.5s;
+    color: $button_color;
+  }
+  nav.stroke ul li a,
+  nav.fill ul li a {
+    position: relative;
+  }
+  nav.stroke ul li a:hover:after {
+    transition: all 0.5s;
+    top: 25px;
+    color: transparent;
+    content: "";
+    position: absolute;
+    background: $button_color;
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    left:calc(50%);
+  }
   &__logo {
     font-family: $manrope_font;
     font-weight: 700;
@@ -144,7 +186,7 @@ body {
 .search {
   background-color: #fff;
   padding: 20px 70px 20px 70px;
-  box-shadow: 0px 3px 64px #8190AF1F;
+  box-shadow: 0px 3px 64px #8190af1f;
 
   &__category {
     h3 {
@@ -163,8 +205,43 @@ body {
   }
 }
 
-
-.middle-hero{
+.middle-hero {
   @extend %breathe;
   background-color: #fff;
+  padding-top: 50px;
+
+  h1 {
+    font-size: 35px;
+    color: $header_black_text_color;
+    font-weight: normal;
+    line-height: 45px;
+    margin: 0;
+    font-family: $manrope_font;
+  }
+
+  h3 {
+    font-weight: 800;
+  }
+
+  &__left {
+    padding-right: 100px;
+    &__image {
+      height: 50px !important;
+      width: 50px !important;
+    }
+  }
+
+  &__right {
+    span {
+      letter-spacing: 0px;
+      line-height: 29px;
+    }
+  }
+  .btn-primary__content {
+    @extend %btn;
+    background-color: $button_color;
+    color: #fff;
+    margin-top: 20px;
+    display: block;
+  }
 }

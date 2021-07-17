@@ -25,7 +25,7 @@ export const Hero: React.FC = () => {
         </Col>
         <Col span={12} className="hero__right"><Image src={HeroImage} alt="Hero Image" height="420" width="400"/></Col>
       </Row>
-      {/* <div className="search">
+      <div className="search">
         <SearchComponent/>
         <hr/>
         <Row gutter={[32, 32]}>
@@ -45,7 +45,7 @@ export const Hero: React.FC = () => {
             <div className="search__category"><Image src={Beauty} alt="Beauty and Well Being" className="search__category__image" /><h3>More</h3></div>
           </Col>
         </Row>  
-      </div> */}
+      </div>
     </div>
   )
 }
