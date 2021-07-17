@@ -6,7 +6,7 @@ body {
   background-color: $landingpage_color;
   background-image: url("../assets/dottedmap.svg");
   background-repeat: no-repeat;
-  background-position-x: center
+  background-position-x: center;
 }
 // Set text color based on bg
 @function set-text-color($color) {
@@ -34,6 +34,30 @@ body {
   @extend %btn;
   background-color: $button_color;
 }
+
+//Container
+%breathe {
+  padding-right: 70px;
+  padding-left: 70px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .breathe {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .breathe {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .breathe {
+    width: 1170px;
+  }
+}
+
 //Container
 .container {
   padding-right: 70px;
@@ -85,7 +109,7 @@ body {
 .hero {
   margin-top: 50px;
 
-  &__left{
+  &__left {
     padding: 90px;
     padding-left: 0px;
     color: #ffffff;
@@ -97,13 +121,13 @@ body {
       line-height: 45px;
       font-family: $manrope_font;
     }
-    span{
+    span {
       font-size: 15px;
       font-weight: 200;
       font-family: $manrope_font;
     }
 
-    .btn-primary__hero{
+    .btn-primary__hero {
       @extend %btn;
       background-color: $button_color;
       color: #fff;
@@ -117,12 +141,13 @@ body {
   }
 }
 
-
-.search{
+.search {
   background-color: #fff;
+  padding: 20px 70px 20px 70px;
+  box-shadow: 0px 3px 64px #8190AF1F;
 
-  &__category{
-    h3{
+  &__category {
+    h3 {
       display: inline;
       font-weight: 600;
       font-size: 14px;
@@ -130,5 +155,16 @@ body {
       margin: 5px;
       padding-bottom: 10px;
     }
+    &__image {
+      width: 13px !important;
+      height: 13px !important;
+      position: relative !important;
+    }
   }
+}
+
+
+.middle-hero{
+  @extend %breathe;
+  background-color: #fff;
 }
