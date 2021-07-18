@@ -22,14 +22,14 @@ export const SearchComponent:React.FC = () => {
         <Form.Item
         name="search"
       >
-        <Input placeholder="Search a Company, Category, Product" />
+        <Input placeholder="Search a Company, Category, Product" className="search-input" />
       </Form.Item>
 
         </Col>
         <Col span={2}>
       <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-        <Button type="primary" htmlType="submit">
-          Submit
+        <Button type="primary" htmlType="submit" className="btn-primary" style={{height:"45px", width:"120px"}}>
+          Search
         </Button>
       </Form.Item>
         </Col>

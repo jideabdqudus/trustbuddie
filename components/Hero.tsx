@@ -28,23 +28,32 @@ export const Hero: React.FC = () => {
       <div className="search">
         <SearchComponent/>
         <hr/>
-        <Row gutter={[32, 32]}>
-          <Col span={5}>
-            <div className="search__category"><Image src={Beauty} alt="Beauty and Well Being" className="search__category__image" /><h3>Beauty</h3></div>
+        <nav className="shift">
+    <ul>
+      <li><a href="#" style={{margin:0}}> <Image src={Beauty} alt="Beauty and Well Being" className="search__category__image" />Beauty & Well-Being</a></li>
+      <li><a href="#"> <Image src={Restaurant} alt="Restaurants and Bars" className="search__category__image" />Restaurants & Bars</a></li>
+      <li><a href="#"> <Image src={Shoping} alt="Shopping" className="search__category__image" />Shopping & Fashion</a></li>
+      <li><a href="#"><Image src={Shiping} alt="Delivery Services" className="search__category__image" /> Delivery Services</a></li>
+      <li><a href="#"><Image src={More} alt="More" className="search__category__image" /> More</a></li>
+    </ul>
+  </nav>
+        {/* <Row gutter={[32, 32]}>
+          <Col span={6}>
+            <div className="search__category"><h3>Beauty & Well-Being</h3></div>
           </Col>
           <Col span={5}>
-            <div className="search__category"><Image src={Restaurant} alt="Beauty and Well Being" className="search__category__image" /><h3>Restaurants & Bars</h3></div>
+            <div className="search__category"><h3>Restaurants & Bars</h3></div>
           </Col>
-          <Col span={5}>
-            <div className="search__category"><Image src={Shoping} alt="Beauty and Well Being" className="search__category__image" /><h3>Shopping</h3></div>
+          <Col span={6}>
+            <div className="search__category"><h3>Shopping & Fashion</h3></div>
           </Col>
-          <Col span={5}>
-            <div className="search__category"><Image src={Beauty} alt="Beauty and Well Being" className="search__category__image" /><h3>Delivery Services</h3></div>
+          <Col span={4} style={{padding:0, margin:0}}>
+            <div className="search__category"><h3>Delivery Services</h3></div>
           </Col>
-          <Col span={4}>
+          <Col span={3}>
             <div className="search__category"><Image src={Beauty} alt="Beauty and Well Being" className="search__category__image" /><h3>More</h3></div>
           </Col>
-        </Row>  
+        </Row>   */}
       </div>
     </div>
   )
