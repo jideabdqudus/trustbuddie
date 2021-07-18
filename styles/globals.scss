@@ -150,6 +150,7 @@ body {
 //Hero
 .hero {
   margin-top: 50px;
+  margin-bottom: 100px;
 
   &__left {
     padding: 90px;
@@ -186,7 +187,7 @@ body {
 .search {
   background-color: #fff;
   position: absolute;
-  bottom: -5px;
+  bottom: -145px;
   padding: 35px 70px 35px 70px;
   box-shadow: 0px 3px 64px #6d7fa31f;
 
@@ -282,21 +283,26 @@ body {
 .middle-hero {
   @extend %breathe;
   background-color: #fff;
-  padding-top: 50px;
+  padding-top: 100px;
+
+
+
 
   h1 {
-    font-size: 35px;
+    font-size: 30px;
     color: $header_black_text_color;
-    font-weight: normal;
-    line-height: 45px;
+    font-weight: bold;
+    line-height: 40px;
     margin: 0;
     font-family: $manrope_font;
   }
 
   h3 {
     font-weight: 800;
+    display: inline-block;
+    margin-left: 10px;
   }
-
+  
   &__left {
     padding-right: 100px;
     &__image {
@@ -304,18 +310,28 @@ body {
       width: 50px !important;
     }
   }
-
+  
   &__right {
-    span {
+    h4{
+      color: #454D54;
+      font-weight: bold;
+      line-height: 20px;
+    }
+    h5 {
       letter-spacing: 0px;
       line-height: 29px;
+      font-size: 13px;
+    }
+    &__image{
+      margin: 0px 20px 0px 0px !important;
+      display: inline-block !important;
     }
   }
   .btn-primary__content {
     @extend %btn;
     background-color: $button_color;
     color: #fff;
-    margin-top: 20px;
+    margin-top: 30px;
     display: block;
   }
 }
