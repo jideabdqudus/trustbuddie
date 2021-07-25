@@ -1,13 +1,12 @@
 @import "_config";
 
 body {
-  // background-color: #fff;
   font-family: "Manrope", sans-serif;
   background-color: $landingpage_color;
   background-image: url("../assets/dottedmap.svg");
   background-repeat: no-repeat;
   background-position-x: center;
-}
+} 
 // Set text color based on bg
 @function set-text-color($color) {
   @if (lightness($color) > 70) {
@@ -285,9 +284,6 @@ body {
   background-color: #fff;
   padding-top: 100px;
 
-
-
-
   h1 {
     font-size: 30px;
     color: $header_black_text_color;
@@ -357,4 +353,76 @@ body {
   border: none;
   background: #f2f5f7 0% 0% no-repeat padding-box;
   height: 45px;
+}
+
+
+.testimonials {
+  @extend %breathe;
+  padding: 100px 150px 100px 150px;
+  background-color: #fff;
+  background-image: url(../assets/testimonials.png);
+  height: 600px;
+  object-fit: fill;
+
+  h1{
+    text-align: center;
+    color: #fff;
+    font-family: $manrope_font;
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 50px;
+  }
+
+  .testimonial{
+    background-color: #fff;
+    height: 250px;
+    width: 320px;
+    padding: 50px;
+    box-shadow: 0px 6px 58px #8190AF41;
+    border: 2px solid #F0F8FF;
+
+    span{
+      color: #454D54;
+    }
+
+    h4{
+      margin-top: 20px;
+      font-weight: bold;
+
+      span{
+        color: grey;
+        font-weight: normal;
+      }
+    }
+
+    &__avatar{
+      height: 100px !important;
+      width: 100px !important;
+    }
+
+    &__rating{
+      height: 50px !important;
+      width: 50px !important;
+    }
+  }
+}
+
+
+.mobile {
+  @extend %breathe;
+  background-color: #fff;
+  background-image: url(../assets/mobile.svg);
+  height: 400px;
+  object-fit: fill;
+
+  &__phone{
+    object-fit: fill !important;
+    max-height: 400px !important;
+    margin: 0px !important;
+    height: 300px !important;
+    width: 300px !important;
+    max-width: 300px !important;
+    min-width: 300px !important;
+    min-height: 300px !important;
+  }
 }

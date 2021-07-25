@@ -55,7 +55,7 @@ export const Content: React.FC = () => {
             <Image src={Guy} alt="payment" className="commitment_image"/>
           </Col>
         </Row>
-        <Row>
+        <Row style={{paddingBottom:"100px"}}>
           <Col span={12} className="middle-hero__left">
             <Image src={Chart} alt="chart" className="middle-hero__left__image"/>
           </Col>
@@ -64,7 +64,7 @@ export const Content: React.FC = () => {
               <h1>Over 71% of Nigerians believe customer reviews are helpful</h1>
               <span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nemi eirmod labore et dolore magna aliquyam erat sed diam nonumy eirtr tempor invidunt ut labore et dolore.consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.</span>
             </div>
-            <Button className="btn-primary__underlined">Learn More > </Button>
+            <Button className="btn-primary__underlined">Learn More </Button>
           </Col>
         </Row>
       </div>
