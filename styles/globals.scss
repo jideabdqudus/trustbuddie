@@ -412,18 +412,43 @@ body {
   @extend %breathe;
   background-color: #fff;
   background-image: url(../assets/mobile.svg);
-  height: 400px;
+  height: 450px;
   padding-top: 30px;
   object-fit: fill;
+
+  .left{
+    margin: 100px 0 100px 0px;
+    padding-right: 130px;
+
+    span{
+      color: #73808C;
+      font-family: $manrope_font;
+    }
+
+    h1{
+      color: #051B2E;
+      font-style: 30px;
+      font-weight: bold;
+    }
+  }
+
+  .btn-primary__content {
+    @extend %btn;
+    background-color: $button_color;
+    color: #fff;
+    margin-top: 30px;
+    display: block;
+  }
 
   &__phone{
     object-fit: fill !important;
     max-height: 400px !important;
     margin: 0px !important;
+    margin-top: 50px !important;
     left: 230px !important;
-    height: 350px !important;
+    height: 370px !important;
     width: 350px !important;
-    max-width: 350px !important;
+    max-width: 450px !important;
     min-width: 300px !important;
     min-height: 300px !important;
   }
